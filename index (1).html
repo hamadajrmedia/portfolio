@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HamadaJR Media — Short-form content people actually watch</title>
+<meta name="description" content="8.9M+ organic views across 21 tracked posts. Short-form content by Hamada, Windsor, Ontario.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E0A16;--surface:#17111F;--raise:#1F1729;--line:#2C2338;--text:#F1EEF6;--muted:#A49CB3;--cyan:#00DCC8;
+--display:"Syne",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4.5vw,3.1rem);font-weight:800;max-width:20ch}
+.lede{color:var(--muted);max-width:56ch;margin-top:16px}
+section{padding:104px 0}
+
+nav{border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none}
+.logo span{color:var(--cyan)}
+.nav-links{display:flex;gap:28px;font-size:.92rem;color:var(--muted)}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--text)}
+
+/* hero: the views themselves are the visual */
+.hero{padding:80px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800}
+.hero .lede{font-size:1.1rem}
+.summary{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);display:flex;gap:40px;flex-wrap:wrap}
+.summary b{display:block;font-family:var(--display);font-size:2rem;font-weight:800;color:var(--cyan)}
+.summary span{font-size:.88rem;color:var(--muted)}
+.ladder{list-style:none}
+.ladder li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding:6px 0}
+.ladder b{font-family:var(--display);font-weight:800;line-height:1;letter-spacing:-.03em}
+.ladder li:nth-child(1) b{font-size:clamp(4rem,9vw,7rem);color:var(--cyan)}
+.ladder li:nth-child(2) b{font-size:clamp(3.2rem,7vw,5.4rem)}
+.ladder li:nth-child(3) b{font-size:clamp(2.4rem,5vw,3.8rem);color:#D9D3E3}
+.ladder li:nth-child(4) b{font-size:clamp(1.9rem,4vw,2.9rem);color:#BDB5CA}
+.ladder li:nth-child(5) b{font-size:clamp(1.6rem,3.2vw,2.3rem);color:var(--muted)}
+.ladder span{font-size:.85rem;color:var(--muted);text-align:right}
+
+/* work list */
+.posts{margin-top:48px;border-top:1px solid var(--line)}
+.post{display:grid;grid-template-columns:120px 1fr auto;gap:28px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+.post .views{font-family:var(--display);font-size:2rem;font-weight:800}
+.post h3{font-family:var(--body);font-size:1.02rem;font-weight:600;letter-spacing:0;line-height:1.4}
+.post p{font-size:.9rem;color:var(--muted);margin-top:4px}
+.post .meta{text-align:right;font-size:.85rem;color:var(--muted);white-space:nowrap}
+.plat{display:inline-block;font-size:.78rem;padding:3px 10px;border-radius:999px;background:var(--raise);color:var(--text);margin-bottom:6px}
+
+/* method */
+.method{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:48px}
+.method div{background:var(--surface);padding:32px}
+.method h3{font-size:1.3rem;margin-bottom:10px}
+.method p{color:var(--muted);font-size:.95rem}
+.method .proof{display:block;margin-top:14px;color:var(--cyan);font-size:.9rem;font-weight:500}
+.tools{margin-top:28px;color:var(--muted);font-size:.92rem}
+
+.flow{list-style:none;counter-reset:f;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px}
+.flow li{counter-increment:f;position:relative;padding:24px 28px 24px 0;border-top:2px solid var(--cyan)}
+.flow li::before{content:counter(f);font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--cyan);display:block;margin-bottom:8px}
+.flow li:not(:last-child)::after{content:"";position:absolute;top:-7px;right:12px;width:12px;height:12px;border-top:2px solid var(--cyan);border-right:2px solid var(--cyan);transform:rotate(45deg)}
+.flow b{display:block;font-family:var(--display);font-size:1.15rem;line-height:1.2}
+.flow span{display:block;color:var(--muted);font-size:.9rem;margin-top:6px}
+.truths{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:56px}
+.truths h3{font-size:1.2rem;margin-bottom:8px}
+.truths p{color:var(--muted);font-size:.95rem}
+.method .biz{display:block;margin-top:8px;color:var(--text);font-size:.9rem;padding-top:10px;border-top:1px solid var(--line)}
+@media (max-width:900px){.flow{grid-template-columns:repeat(2,1fr);row-gap:24px}.truths{grid-template-columns:1fr;gap:24px}}
+@media (max-width:560px){.flow{grid-template-columns:1fr}.flow li::after{display:none}}
+/* contact */
+.contact{border-top:1px solid var(--line);padding:72px 0}
+.contact .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.contact h2{font-size:clamp(1.6rem,3.4vw,2.3rem)}
+.btn{display:inline-block;font-weight:600;text-decoration:none;padding:14px 24px;border-radius:999px;background:var(--cyan);color:var(--ink)}
+.btn:hover{background:#3df0de}
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:.85rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+/* one moment: the ladder settles in on load */
+.ladder li{animation:rise .7s ease-out both}
+.ladder li:nth-child(2){animation-delay:.08s}.ladder li:nth-child(3){animation-delay:.16s}
+.ladder li:nth-child(4){animation-delay:.24s}.ladder li:nth-child(5){animation-delay:.32s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@media (prefers-reduced-motion:reduce){.ladder li{animation:none}html{scroll-behavior:auto}}
+
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:48px}.method{grid-template-columns:1fr}}
+@media (max-width:560px){section{padding:76px 0}.nav-links{display:none}.post{grid-template-columns:1fr;gap:6px}.post .meta{text-align:left}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">HamadaJR <span>Media</span></a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#business">For your business</a>
+      <a href="#method">How I do it</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Short-form content people actually watch.</h1>
+      <p class="lede">I'm Hamada, a content creator and strategist in Windsor, Ontario. I know what makes people stop scrolling and watch, and I use it to get local businesses seen, remembered and called.</p>
+      <div class="summary">
+        <div><b>8.9M+</b><span>organic views, 21 tracked posts</span></div>
+        <div><b>13</b><span>posts past 100K views</span></div>
+      </div>
+    </div>
+    <ul class="ladder" aria-label="My top five posts by views">
+      <li><b>3M</b><span>TikTok</span></li>
+      <li><b>2M</b><span>Instagram</span></li>
+      <li><b>600K</b><span>TikTok</span></li>
+      <li><b>500K</b><span>TikTok</span></li>
+      <li><b>459K</b><span>Instagram</span></li>
+    </ul>
+  </div>
+</header>
+
+<section id="work" style="padding-top:24px">
+  <div class="wrap">
+    <h2>My top posts, and why they hit.</h2>
+    <p class="lede">All organic, no paid ads, from an account that started small. The same skills work for a café, a gym or a barbershop.</p>
+    <div class="posts">
+      <div class="post"><div class="views">3M</div><div><h3>"POV: Hasanabi shocks his dog — 98% accuracy"</h3><p>Posted fast, mid-controversy, with a comedic twist on a heated topic.</p></div><div class="meta"><span class="plat">TikTok</span><br>222K likes, 10K saves</div></div>
+      <div class="post"><div class="views">2M</div><div><h3>Guy attacks a McDonald's and thinks he's tough</h3><p>A controversial clip plus my commentary. The comments section did the rest.</p></div><div class="meta"><span class="plat">Instagram</span><br>154.8K likes, 15K shares</div></div>
+      <div class="post"><div class="views">600K</div><div><h3>Same video, re-cut for TikTok</h3><p>A cross-platform test. The hook worked on both algorithms.</p></div><div class="meta"><span class="plat">TikTok</span><br>76K likes, 8.9K saves</div></div>
+      <div class="post"><div class="views">500K</div><div><h3>"It's over for Adam 22"</h3><p>A talking video posted at the peak of the trend.</p></div><div class="meta"><span class="plat">TikTok</span><br>46K likes, 4K saves</div></div>
+      <div class="post"><div class="views">459K</div><div><h3>Furry tournament clip</h3><p>Comedy and shock in one. 17s average watch on a 19s reel.</p></div><div class="meta"><span class="plat">Instagram</span><br>11.3K likes, 18K shares</div></div>
+      <div class="post"><div class="views">430K</div><div><h3>Austin McBroom, 98% accuracy POV</h3><p>A surprise angle on a trending name.</p></div><div class="meta"><span class="plat">TikTok</span><br>35K likes, 3.5K shares</div></div>
+      <div class="post"><div class="views">350K</div><div><h3>Referee reacts</h3><p>A 5-second clip with a 10-second average watch. It looped twice per view.</p></div><div class="meta"><span class="plat">TikTok</span><br>42K likes, 2.8K saves</div></div>
+      <div class="post"><div class="views">300K</div><div><h3>"50+ arrests" reaction</h3><p>A shocking hook, then my own take on it.</p></div><div class="meta"><span class="plat">Instagram</span><br>15.7K likes, 1.3K comments</div></div>
+      <div class="post"><div class="views">300K</div><div><h3>Wild animal fact, with commentary</h3><p>A scroll-stopping first line, then my take after the clip.</p></div><div class="meta"><span class="plat">TikTok</span><br>23K likes, 13K shares</div></div>
+      <div class="post"><div class="views">287K</div><div><h3>Bro got cheated on and changed his life</h3><p>A visual hook that makes you keep watching to see the result.</p></div><div class="meta"><span class="plat">TikTok</span><br>17K likes, 1.3K saves</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="business" style="padding-top:0">
+  <div class="wrap">
+    <h2>Views are just the start.</h2>
+    <p class="lede">Social media isn't dancing on TikTok or chasing likes. For a business, it's the cheapest way to get in front of people nearby, again and again, until they come in.</p>
+    <ol class="flow">
+      <li><b>People nearby see your video</b><span>The right hook stops them scrolling.</span></li>
+      <li><b>They check out your page</b><span>Your feed shows them who you are.</span></li>
+      <li><b>They follow or save you</b><span>Now you're on their radar for later.</span></li>
+      <li><b>They call, book or walk in</b><span>That's the goal every video is built for.</span></li>
+    </ol>
+    <div class="truths">
+      <div><h3>You don't need to go viral</h3><p>A few thousand views from people in your area beats a million from strangers across the world.</p></div>
+      <div><h3>Your niche has its own hooks</h3><p>A barbershop, a restaurant and a gym all grab attention differently. I find what works for yours.</p></div>
+      <div><h3>Built around your goal</h3><p>More calls, more bookings, more foot traffic. The content is planned backward from what you need.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="method" style="padding-top:0">
+  <div class="wrap">
+    <h2>What I look for in every video, and how it works for you.</h2>
+    <div class="method">
+      <div><h3>The hook</h3><p>The first second decides everything. A visual, a line or a caption that makes stopping the easy choice.</p><span class="proof">A caption-led hook carried my 3M TikTok.</span><span class="biz">In your business: the first second shows what makes you different.</span></div>
+      <div><h3>The emotion</h3><p>Every video is built around one feeling — shock, anger, joy, debate — on purpose, not by accident.</p><span class="proof">Shock and comedy together: 18K shares on one reel.</span><span class="biz">In your business: the owner's story, a satisfying process, a customer's reaction.</span></div>
+      <div><h3>Retention</h3><p>Pacing and re-hooks that keep people watching to the end, because watch time is what the algorithm rewards.</p><span class="proof">14–19 second average watch on 16–33 second videos.</span><span class="biz">In your business: people who watch to the end remember your name.</span></div>
+      <div><h3>Timing</h3><p>Posting while a topic is peaking, with an angle nobody else took.</p><span class="proof">Two trend posts posted fast: 3M and 500K views.</span><span class="biz">In your business: local events, seasons and trends, used while they matter.</span></div>
+    </div>
+    <p class="tools">Tools I work with daily: CapCut, Meta Business Suite, TikTok Business Suite, Metricool.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Want people in your area watching your business?</h2>
+    <a class="btn" href="mailto:hello@hamadajrmedia.com">Email hello@hamadajrmedia.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>© 2026 HamadaJR Media</span><span>Windsor, Ontario</span></div>
+</footer>
+</body>
+</html>
